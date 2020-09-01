@@ -55,7 +55,6 @@ def yarn_dev(*packages)
   run("yarn add -D #{packages.join(" ")}")
 end
 
-# Add necessary DefinitelyTyped packages to package.json
 say "Adding required yarn packages for TypeScript web development...", :yellow
 yarn_dev "@types/node", "@types/webpack-env", "typescript", "ts-loader"
 say "Done.", :green
